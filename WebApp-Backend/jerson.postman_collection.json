@@ -1,0 +1,659 @@
+{
+	"info": {
+		"_postman_id": "95766a3a-af05-402d-80fb-9e0aaafaaab7",
+		"name": "jerson",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24087109"
+	},
+	"item": [
+		{
+			"name": "usuario",
+			"item": [
+				{
+					"name": "crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"jerson 2\",\r\n    \"direccion\":\"calle test 2\",\r\n    \"correo\":\"jerson2@gmail.com\",\r\n    \"contraseña\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/usuario/GuardarUsuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"usuario",
+								"GuardarUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idusuario\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/usuario/EliminarUsuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"usuario",
+								"EliminarUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listausuarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/usuario/obtenerUsuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"usuario",
+								"obtenerUsuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "iniciarsesion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"correo\":\"jerson3@gmai3l.com\",\r\n    \"contraseña\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/usuario/iniciarSesionUsuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"usuario",
+								"iniciarSesionUsuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idusuario\":2,\r\n    \"nombre\":\"jerson 3\",\r\n    \"direccion\":\"calle test 3\",\r\n    \"correo\":\"jerson3@gmail.com\",\r\n    \"contraseña\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/usuario/GuardarUsuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"usuario",
+								"GuardarUsuario"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "mascota",
+			"item": [
+				{
+					"name": "crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"raza\": \"Labrador 2\",\r\n  //\"foto\": \"ruta/a/la/foto.jpg\",\r\n  \"descripcion\": \"Labrador dorado muy amigable\",\r\n  \"nombre\": \"Max\",\r\n  \"fechanac\": \"2023-01-15\",\r\n  \"observacion\": \"Ninguna\",\r\n  \"idusuario\": 3\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/mascota/Guardar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"mascota",
+								"Guardar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idmascota\":4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/mascota/Eliminar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"mascota",
+								"Eliminar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/mascota/obtener",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"mascota",
+								"obtener"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"raza\": \"Labrador 2\",\r\n  //\"foto\": \"ruta/a/la/foto.jpg\",\r\n  \"descripcion\": \"Labrador dorado muy amigable\",\r\n  \"nombre\": \"Max\",\r\n  \"fechanac\": \"2023-01-15\",\r\n  \"observacion\": \"Ninguna\",\r\n  \"idusuario\": 3,\r\n  \"idmascota\":1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/mascota/Guardar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"mascota",
+								"Guardar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "consejo",
+			"item": [
+				{
+					"name": "crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"titulo\": \"Consejo para el cuidado de las plantas\",\r\n  \"descripcion\": \"Recuerda regar tus plantas regularmente y colocarlas en un lugar con suficiente luz solar.\",\r\n  \"fecha\": \"2024-05-05\",\r\n  \"idusuario\": 3\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/consejo/Guardar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"consejo",
+								"Guardar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idconsejo\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/consejo/Eliminar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"consejo",
+								"Eliminar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/consejo/obtener",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"consejo",
+								"obtener"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"titulo\": \"Consejo para el cuidado de las plantas\",\r\n  \"descripcion\": \"Recuerda regar tus plantas regularmente y colocarlas en un lugar con suficiente luz solar.\",\r\n  \"fecha\": \"2024-05-05\",\r\n  \"idusuario\": 3,\r\n  \"idconsejo\":2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/consejo/Guardar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"consejo",
+								"Guardar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "anuncio",
+			"item": [
+				{
+					"name": "crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n            //\"idnoticias\": 2\r\n            \"titulo\": \"test 1\",\r\n            \"descripcion\": \"req.body.descripcion\",\r\n            \"telefono\": \"req.body.telefono\",\r\n            \"direccion\": \"req.body.direccion\",\r\n            //\"estado\":1,\r\n            \"recompensa\": \"req.body.recompensa\",\r\n            \"observacion\": \"req.body.observacion\",\r\n            \"fecha\":\"2023-01-15\",\r\n            \"idusuario\": 3,\r\n            \"list_dataD\":[\r\n                {\r\n                    \"idmascota\":5\r\n                },\r\n                {\r\n                    \"idmascota\":6\r\n                }\r\n            ]\r\n            }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/anuncio/Guardar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"anuncio",
+								"Guardar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idanuncio\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/anuncio/Eliminar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"anuncio",
+								"Eliminar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/anuncio/obtener",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"anuncio",
+								"obtener"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idanuncio\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/anuncio/Eliminar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"anuncio",
+								"Eliminar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "foro",
+			"item": [
+				{
+					"name": "crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    //\"id_foro\":1,\r\n  \"titulo\": \"Consejo para el cuidado de las plantas\",\r\n  \"descripcion\": \"Recuerda regar tus plantas regularmente y colocarlas en un lugar con suficiente luz solar.\",\r\n  \"fecha\": \"2024-05-05\",\r\n  \"tipo\":\"prueba\",\r\n  \"id_usuario\": 3,\r\n  \"id_noticias\":4,\r\n  \"id_consejo\":3\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/foro/Guardar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"foro",
+								"Guardar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_foro\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/foro/Eliminar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"foro",
+								"Eliminar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lista",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/foro/obtener",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"foro",
+								"obtener"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"id_foro\":3,\r\n  \"titulo\": \"Consejo para el cuidado de las plantas\",\r\n  \"descripcion\": \"Recuerda regar tus plantas regularmente y colocarlas en un lugar con suficiente luz solar.\",\r\n  \"fecha\": \"2024-05-05\",\r\n  \"tipo\":\"prueba 3\",\r\n  \"id_usuario\": 3,\r\n  \"id_noticias\":4,\r\n  \"id_consejo\":3\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/foro/Guardar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"foro",
+								"Guardar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
