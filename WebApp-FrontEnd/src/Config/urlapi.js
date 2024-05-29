@@ -1,1 +1,0 @@
-export const urlapi="http://localhost:3000"
